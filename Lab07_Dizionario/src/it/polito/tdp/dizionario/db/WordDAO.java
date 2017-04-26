@@ -18,9 +18,6 @@ public class WordDAO {
 		return new ArrayList<String>();
 	}
 
-	/*
-	 * Ritorna tutte le parole di una data lunghezza
-	 */
 	public List<String> getAllWordsFixedLength(int numeroLettere) {
 
 		Connection conn = DBConnect.getInstance().getConnection();
