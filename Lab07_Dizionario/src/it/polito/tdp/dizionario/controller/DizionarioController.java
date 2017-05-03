@@ -26,6 +26,8 @@ public class DizionarioController {
 	private TextArea txtResult;
 	@FXML
 	private TextField inputNumeroLettere;
+	@FXML 
+	private Button btnIteriamo; 
 	@FXML
 	private TextField inputParola;
 	@FXML
@@ -124,13 +126,21 @@ public class DizionarioController {
 		}
 	}
 
+	 @FXML
+	    void doIteriamo(ActionEvent event) {
+		 
+		 this.txtResult.setText(this.m.itera(this.inputParola.getText()));
+
+	    }
 	@FXML
-	void initialize() {
-		assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Dizionario.fxml'.";
-		assert inputNumeroLettere != null : "fx:id=\"inputNumeroLettere\" was not injected: check your FXML file 'Dizionario.fxml'.";
-		assert inputParola != null : "fx:id=\"inputParola\" was not injected: check your FXML file 'Dizionario.fxml'.";
-		assert btnGeneraGrafo != null : "fx:id=\"btnGeneraGrafo\" was not injected: check your FXML file 'Dizionario.fxml'.";
-		assert btnTrovaVicini != null : "fx:id=\"btnTrovaVicini\" was not injected: check your FXML file 'Dizionario.fxml'.";
-		assert btnTrovaGradoMax != null : "fx:id=\"btnTrovaTutti\" was not injected: check your FXML file 'Dizionario.fxml'.";
-	}
+	  void initialize() {
+        assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert inputNumeroLettere != null : "fx:id=\"inputNumeroLettere\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert inputParola != null : "fx:id=\"inputParola\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert btnGeneraGrafo != null : "fx:id=\"btnGeneraGrafo\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert btnTrovaVicini != null : "fx:id=\"btnTrovaVicini\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert btnTrovaGradoMax != null : "fx:id=\"btnTrovaGradoMax\" was not injected: check your FXML file 'Dizionario.fxml'.";
+        assert btnIteriamo != null : "fx:id=\"btnIteriamo\" was not injected: check your FXML file 'Dizionario.fxml'.";
+
+    }
 }
